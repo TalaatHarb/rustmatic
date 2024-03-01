@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "rustmatic-editor",
+    "rustmatic-examples"
+]
+
+[workspace.dependencies]
+rustmatic = { path = "rustmatic" }
+rustmatic-script = { path = "rustmatic-script" }

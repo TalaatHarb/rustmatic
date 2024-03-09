@@ -15,11 +15,11 @@ mod tests {
 
     #[test]
     fn ndarray_works(){
-        let a = arr2(&[[1,2],[3,4]]);
-        let b = arr2(&[[5,6],[7,8]]);
+        let a: ArrayBase<ndarray::OwnedRepr<f64>, Dim<[usize; 2]>> = arr2(&[[1.0,2.0],[3.0,4.0]]);
+        let b: ArrayBase<ndarray::OwnedRepr<f64>, Dim<[usize; 2]>> = arr2(&[[5.0,6.0],[7.0,8.0]]);
 
-        let c = a.dot(&b);
+        let c: ArrayBase<ndarray::OwnedRepr<f64>, Dim<[usize; 2]>> = a.dot(&b);
 
-        assert_eq!(array![[19,22],[43,50]], c);
+        assert_eq!(array![[19.0,22.0],[43.0,50.0]], c);
     }
 }

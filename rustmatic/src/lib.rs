@@ -1,6 +1,4 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+mod corefcn;
 
 #[cfg(test)]
 mod tests {
@@ -8,9 +6,9 @@ mod tests {
     use ndarray::prelude::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn corefcn_works() {
+        corefcn::zeros::zeros();
+        assert!(true);
     }
 
     #[test]
